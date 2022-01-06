@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 5 By Ansh Mishra </title>
+</head>
+
+<style>
+
+body{
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    overflow-x: hidden;
+}
+*::selection{
+    background-color: rgb(255, 125, 125);
+    color:rgb(77, 76, 76) ;
+}
+html::-webkit-scrollbar{
+    width: 15px;
+}
+html::-webkit-scrollbar-track{
+    background: rgb(77, 76, 76);
+}
+html::-webkit-scrollbar-thumb{
+    background: rgb(255, 125, 125);
+}
+.nav{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+box-shadow: 0px 3px 4px rgb(145, 140, 140);
+padding-bottom: 20px;
+}
+.logo{
+    font-size: 22px;
+    padding-left: 35px;
+    font-weight: 500;
+}
+.logo img{
+    width: 20px;
+    padding-top: 15px;
+    /* height: 20px; */
+    margin-bottom: -2px;
+}
+.menu{
+    padding-top: 15px;
+    padding-right: 15px;
+}
+.menu a{
+text-decoration: none;
+padding: 10px;
+/* padding-top: 20px; */
+color: black;
+font-size: 20px;
+}
+.menu a:hover{
+    /* font-size: 22px; */
+    color: rgb(223, 126, 126);
+    font-weight: bold;
+}
+.homerow{
+    display: flex;
+    flex-wrap: wrap;
+}
+.home-left-col{
+    flex-basis: 40%;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    /* background: red; */
+    /* border: 2px solid red; */
+    padding-top: 180px;
+    padding-left: 40px;
+}
+.home-left-col p{
+    color: rgb(223, 126, 126);
+}
+.home-left-col h1{
+    line-height: 0px;
+    font-size: 40px;
+}
+.home-right-col{
+    flex-basis: 40%;
+    margin-top: 50px;
+    margin-left: 200px;
+/* border: 3px solid black; */
+    /* background: black; */
+    /* display: inline-block; */
+}
+.home-right-col img{
+    width: 450px;
+}
+.one{
+    font-size: 22px;
+    color: rgb(77, 76, 76);
+}
+.about{
+    text-align: center;
+    font-size: 30px;
+    /* border: 2px  solid red; */
+    padding-top: 30px;
+    margin-bottom: -20px;
+}
+.aboutrow{
+    display: flex;
+}
+.about-left-col{
+    /* border: 3px solid black; */
+    margin-left: 70px;
+}
+.about-right-col{
+    font-size: 20px;
+    line-height: 40px;
+    /* border: 3px solid blue; */
+    margin-left: 60px;
+}
+.protect{
+    font-size: 30px;
+    /* margin-left: 100px; */
+    text-align: center;
+    /* background-color: black; */
+}
+.protectrow{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 3px solid red; */
+    margin-left: 100px;
+}
+.protectcol{
+    flex-basis: 25%;
+    box-shadow: 2px 5px 10px rgb(77, 76, 76);
+    /* box-shadow: 20px 20px 50px rgb(0,0,0,0.5); */
+    padding: 30px;
+    text-align: center;
+    padding-right: 30px;
+    /* border: 3px solid blue; */
+    /* margin-bottom: 100px; */
+}
+.button{
+    /* width: 170px; */
+    /* height: 30px; */
+    background-color:rgb(223, 126, 126) ;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 20px;
+    border: 6px solid rgb(223, 126, 126);
+}
+.button:hover{
+    background-color:rgb(77, 76, 76) ;
+    border-color:rgb(77, 76, 76)  ;
+}
+.symptoms{
+    font-size: 30px;
+    text-align: center;
+    /* border: 3px solid black; */
+    margin-top: 80px;
+}
+.symptomsrow{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+.symptomscol{
+    flex-basis: 30%;
+    text-align: center;
+    box-shadow: 2px 3px 4px rgb(77, 76, 76);
+}
+.symptomscol img{
+    /* border: 3px solid red; */
+    /* padding-top: 10px; */
+    margin-top: 15px;
+}
+.sanitizer{
+    text-align: center;
+    font-size: 30px;
+    /* border: 3px solid red; */
+    margin-top: 70px;
+}
+.sanitizerrow{
+    display: flex;
+}
+.sanitizer-left-col{
+    /* border: 3px solid blue; */
+    flex-basis: 50%;
+}
+.sanitizer-right-col{
+    /* border: 3px solid red; */
+    flex-basis: 50%;
+    font-size: 20px;
+    padding-top: 70px;
+    color: rgb(77, 76, 76);
+    /* background-color:rgb(223, 126, 126) ; */
+}
+#who{
+    /* background-color: rgb(77, 76, 76); */
+    background: url(coronanews.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.who{
+    font-size: 30px;
+    text-align: center;
+    /* border: 3px solid red; */
+    margin-top: 80px;
+    color: rgb(223, 126, 126);
+    /* color: black ; */
+}
+.whorow{
+    display: flex;
+    flex-wrap: wrap;
+}
+.whocol{
+    flex-basis: 35%;
+    /* padding: 100px;   */
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    text-align: center; 
+    /* padding-left: 10px; */
+    margin-left: 100px;
+    /* border: 3px solid red; */
+    padding-bottom: 45px;
+}
+iframe:hover{
+    width: 350px;
+    height: 220px;
+}
+.spread{
+    font-size: 30px;
+    text-align: center;
+}
+.spreadrow{
+    display: flex;
+    flex-wrap: wrap;
+}
+.spread-left-col{
+flex-basis: 50%;
+/* border: 3px solid blue; */
+}
+.spread-right-col{
+flex-basis: 30%;
+text-align: center;
+/* border: 3px solid green; */
+font-size: 30px;
+font-weight: bold;
+color:  rgb(77, 76, 76);
+}
+.footer{
+    background-color:  rgb(77, 76, 76);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    height: 400px;
+}
+.footercol{
+ flex-basis: 15%;
+ text-align: center;
+ padding-left: 25px;
+ padding-right: 25px;
+ /* border: 3px solid blue; */
+}
+.footercol h3{
+    color: rgb(223, 126, 126);
+}
+.footercol img{
+    padding: 10px;
+}
+.footercol a{
+text-decoration: none;
+color: white;
+text-align: center;
+line-height: 40px;
+}
+.footercol li{
+    list-style-type: none;
+    text-align: center;
+}
+.footercol a:hover{
+ color:rgb(223, 126, 126) ;
+}
+
+@media screen and (max-width:800px ){
+    body{
+        /* overflow-x: hidden; */
+    }
+    .nav{
+        display: none;
+    }
+    .home-left-col{
+        flex-basis: 100%;
+        border: 3px solid red;
+        text-align: center;
+        justify-content: center;
+        /* margin-left: 100px; */
+    }
+    .home-left-col h1{
+        font-size: 30px;
+    }
+    .home-right-col{
+        flex-basis: 100%;
+        border: 3px solid red;
+        /* margin-bottom: 200px; */
+    }
+    .about h2{
+        text-align: center;
+        justify-content: center;
+        border: 3px solid red;
+        padding-right: 100px;
+    }
+    .aboutrow{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .about-left-col{
+        flex-basis: 100%;
+        display: flex;
+    }
+    .about-right-col{
+        flex-basis: 100%;
+        display: flex;
+    }
+}
+
+
+</style>
+
+<body>
+
+    <header id="home">
+        <nav class="nav">
+            <div class="logo">
+                C<span><img src="coronavirus.png" alt=""></span>vid-19
+            </div>
+            <div class="menu">
+                <a href="">   Home         </a>
+                <a href="">  About         </a>
+                <a href="">  Protect       </a>
+                <a href="">  Symptoms      </a>
+                <a href="">  Sanitization  </a>
+                <a href="">  WHO           </a>
+                <a href="">  Spread        </a>
+            </div>
+        </nav>
+        <div class="homerow">
+            <div class="home-left-col">
+                <p style="font-size: 25px; font-weight: 500;">C <span><img src="coronavirus.png" alt="" width="22px" style="padding: 0px; margin-left: -5px; margin-right: -4px ;margin-bottom: -2px;"></span> vid-19</p>
+                <h1>Stay Home Stay Safe</h1>
+                <p class="one" style="color: rgb(77, 76, 76);"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore laudantium quam rerum debitis ducimus est velit et. Optio facilis placeat iure exercitationem. Veritatis, blanditiis eum!</p>
+              
+        </div>
+        
+        <div class="home-right-col">
+            <img src="PPE.png" alt="" >
+        </div>
+        </div>
+    </header>
+    
+    <section id="about">
+        <div class="about">
+            <h2>Ab <span><img src="coronavirus.png" alt="" width="30px" style="margin-right: -10px; margin-left: -10px;"></span> ut</h2>
+        </div>
+        <marquee behavior="" direction="" scrollamount="20%"> <img src="coronavirus.png" alt="" width="30px"></marquee>
+        <!-- <marquee behavior="" direction=""> <img src="coronavirus.png" alt="" width="30px"></marquee> -->
+        <div class="aboutrow">
+            <div class="about-left-col">
+                <img src="Covid-19 Patient.jpg" alt="" width="450px">
+            </div>
+            <div class="about-right-col">
+                <ul style="color: rgb(77, 76, 76);">
+                    <li>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, fugit.    </li>
+                    <li>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, fugit.    </li>
+                    <li>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, fugit.    </li>
+                    <li>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, fugit.    </li>
+                    <li>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, fugit.    </li>
+                    <li>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, fugit.    </li>
+                    <li>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, fugit.    </li>
+                    <li>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, fugit.    </li>
+                </ul>
+                <marquee behavior="" direction=""> <img src="coronavirus.png" alt="" width="30px"> <img src="coronavirus.png" alt="" width="30px" ></marquee>
+                <marquee behavior="" direction="" scrollamount="10%"> <img src="coronavirus.png" alt="" width="30px"></marquee>
+            </div>
+            <!-- <marquee behavior="" direction=""> <img src="coronavirus.png" alt="" width="30px"></marquee> -->
+        </div>
+    </section>
+
+    <section id="protect">
+        <div class="protect">
+            <h2>Pr<span><img src="coronavirus.png" alt="" width="30px"></span>tect</h2>
+        </div>
+        <div class="protectrow">
+            <div class="protectcol">
+                <img src="mask.png" alt="" width="150px">
+                <h3>Use of Mask Regularly</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, molestias velit quis omnis ipsam nulla perferendis facere ut temporibus nisi voluptates ipsum, atque sunt commodi!</p>
+                <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiYp_jw1-nwAhXhlUsFHdaQCeAYABAAGgJzZg&ae=2&ohost=www.google.com&cid=CAESP-D2osoA3wMYldze_IHeMCxvOqNwp12yt9PXZi9kY7FkW6zDAkPqcFEvRyWgvY7gBs0Z_ez0jyQD8gOwTNXJoQ&sig=AOD64_3SZP2zhjIOF9XudqoT5k6-sCORFA&q&adurl&ved=2ahUKEwjbofDw1-nwAhVlmuYKHQaIDH8Q0Qx6BAgCEAE" class="button">Learn more</a>
+            </div>       
+            <div class="protectcol">
+                <img src="washing-hands.png" alt="" width="150px">
+                <h3>Wash hand Regularly</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, molestias velit quis omnis ipsam nulla perferendis facere ut temporibus nisi voluptates ipsum, atque sunt commodi!</p>
+                <a href="https://www.who.int/gpsc/5may/Hand_Hygiene_Why_How_and_When_Brochure.pdf" class="button">Learn more</a>
+            </div>       
+            <div class="protectcol">
+                <img src="social-distancing.png" alt="" width="150px">
+                <h3>Social-distancing</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, molestias velit quis omnis ipsam nulla perferendis facere ut temporibus nisi voluptates ipsum, atque sunt commodi!</p>
+                <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjPiISl2OnwAhXPfysKHW0GARoYABACGgJzZg&ae=2&ohost=www.google.com&cid=CAESP-D20hIXAQwI9y708cWq8BH0XQxU9Rq2moidthX7a3ElcJFVPLIRSxYf2Uou1E8Eby-BKoU1uHQo5B62MJ1LNw&sig=AOD64_20djPHHrTpw3ayY6-DMriRczWXjg&q&adurl&ved=2ahUKEwjEtvuk2OnwAhXK73MBHT0BCtEQ0Qx6BAgCEAE" class="button">Learn more</a>
+            </div>            
+        </div>
+    </section>
+
+    <section id="symptoms">
+        <div class="symptoms">
+            <h2>Sympt<span><img src="coronavirus.png" alt="" width="30px"></span>ms</h2>
+        </div>
+
+        <div class="symptomsrow">
+            <!-- <img src="symptoms.jpg" alt=""> -->
+            <div class="symptomscol">
+                <img src="s1.jpg" alt="" width="100px">
+                <!-- <h3>Cough</h3> -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, optio? Nobis doloribus in repudiandae corporis, quo autem fugiat voluptatem</p>
+            </div>
+            <div class="symptomscol">
+                <img src="s2.jpg" alt="" width="100px">
+                <!-- <h3> Shortness of Breath </h3> -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, optio? Nobis doloribus in repudiandae corporis, quo autem fugiat voluptatem</p>
+            </div>
+            <div class="symptomscol">
+                <img src="s3.jpg" alt="" width="100px">
+                <!-- <h3>Fever</h3> -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, optio? Nobis doloribus in repudiandae corporis, quo autem fugiat voluptatem</p>
+            </div>
+            <div class="symptomscol">
+                <img src="s4.jpg" alt="" width="100px">
+                <!-- <h3>Sore Throat</h3> -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, optio? Nobis doloribus in repudiandae corporis, quo autem fugiat voluptatem</p>
+            </div>
+            <div class="symptomscol">
+                <img src="s5.jpg" alt="" width="100px">
+                <!-- <h3>Headache</h3> -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, optio? Nobis doloribus in repudiandae corporis, quo autem fugiat voluptatem</p>
+            </div>
+            <div class="symptomscol">
+                <img src="s1.jpg" alt="" width="100px">
+                <!-- <h3> Dry Cough </h3> -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, optio? Nobis doloribus in repudiandae corporis, quo autem fugiat voluptatem</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="Sanitizer">
+        <div class="sanitizer">
+            <h2>Sanitizati<span><img src="coronavirus.png" alt="" width="30px"></span>n</h2>
+        </div>
+        <div class="sanitizerrow">
+            <div class="sanitizer-left-col">
+                <img src="corona spray.jpg" alt="" width="750px">
+            </div>
+            <div class="sanitizer-right-col">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos perferendis similique itaque repudiandae maiores asperiores ex, error, repellendus distinctio minima ullam quisquam eaque fugiat totam assumenda aut excepturi voluptatem nisi adipisci. Quam sint aut minima odio sequi minus blanditiis dignissimos!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="who">
+        <div class="who">
+            <h2>WH<span><img src="coronavirus.png" alt="" width="35px"></span></h2>
+        </div>
+        <div class="whorow">
+            <div class="whocol">
+                <iframe width="330" height="200" src="https://www.youtube.com/embed/gjNbqGCLbOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="whocol">
+                <iframe width="330" height="200" src="https://www.youtube.com/embed/Gm_4CD0zWB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="whocol">
+                <iframe width="330" height="200" src="https://www.youtube.com/embed/WPNHVs5QqqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="whocol">
+                <iframe width="330" height="200" src="https://www.youtube.com/embed/RiDEWT_b2Qk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="spread">
+        <div class="spread">
+         <h2>W<span><img src="coronavirus.png" alt="" width="30px"></span>rld Spread</h2>
+        </div>
+        <div class="spreadrow">
+            <div class="spread-left-col">
+                <img src="world.png" alt="" width="800px">
+            </div>
+            <div class="spread-right-col">
+                    <p>Better to wear mask😷than a Ventilator🏥</p>
+                    <p>Better to stay Home🏡 than in an ICP🛌🏻</p>
+                    <p style="font-size: 45px;">Stay Home🏠 Stay Safe</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+       
+        <div class="footercol">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit asperiores veritatis labore, porro et, deleniti officiis quisquam quasi ducimus doloribus reiciendis, laboriosam harum ullam dicta. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aspernatur accusantium ullam voluptatibus ea  </p>
+        </div>
+        <div class="footercol">
+            <h3>Links</h3>
+           <ol>
+               <li>  <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiEvY-BqOrwAhUIDisKHRlWB7wYABACGgJzZg&ae=2&ohost=www.google.com&cid=CAASEuRoMKZ8vdfvk7olUFNqr3JlQA&sig=AOD64_1AXn7T_fZEWDCMz68nAk0apOIpqQ&q&adurl&ved=2ahUKEwjvxYSBqOrwAhXE4HMBHcjGBiEQ0Qx6BAgCEAE"> WHO Official</a> </li>
+               <li>  <a href="https://www.aarogyasetu.gov.in/"> Aarogya Setu</a> </li>
+               <li>  <a href="https://www.mygov.in/covid-19"> MyGov </a> </li>
+               <li>  <a href="https://timesofindia.indiatimes.com/city/noida/after-free-meals-sector-18-gurdwara-starts-o2-langar-for-covid-patients/articleshow/82469993.cms"> WHO</a> Free Food </li>
+               <li>  <a href="https://www.cityspidey.com/news/13499/this-man-is-distributing-free-oxygen-cylinder-in-delhi"> Free Oxygen</a> </li>
+           </ol>
+        </div>
+        <div class="footercol">
+            <h3>Articles</h3>        
+           <ol>
+               <li><a href="https://www.springernature.com/in/researchers/campaigns/coronavirus/"> Article 1</a>   </li>
+               <li> <a href="https://www.the-scientist.com/tag/coronavirus">  Article 2 </a> </li>
+               <li> <a href="https://www.who.int/health-topics/coronavirus">  Article 3 </a> </li>
+               <li> <a href="https://www.frontiersin.org/articles/10.3389/fmed.2020.00250/full">  Article 4 </a>
+               </li>
+               <li> <a href="https://www.google.com/aclk?sa=L&ai=DChcSEwjsvYCWq-rwAhUTnUsFHVPsCfEYABAAGgJzZg&ae=2&sig=AOD64_2zH-b_3zzV1eGBhF-W_KdtRwklEg&q&adurl&ved=2ahUKEwiP9PiVq-rwAhVL73MBHZ71A8IQ0Qx6BAgDEAE">  Article 5 </a></li>
+           </ol>
+        </div>
+        <div class="footercol">
+            <h3>Contact-Info</h3>
+            <p> ansh2003mishra@gmail.com </p>
+            <p> 7895484307 </p>
+            <p> House No.1 Sahawar Gate, Kasganj, India </p>
+            <img src="whatsapp.png" alt=""  width="25px">
+            <img src="facebook.png" alt=""  width="25px">
+            <img src="youtube.png" alt=""  width="25px">
+            <img src="twitter.png" alt=""  width="25px">
+        </div>
+        <div class="footercol">
+            <h3>Special Thanks</h3>
+            <p>Special Thanks to our doctors,Medical Staff, Police, Government and all other workers. </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate fugit in placeat ut. Veritatis ducimus tempore quia exercitationem error. Commodi expedita facere distinctio consequatur, eius </p>
+        </div>
+      <marquee behavior="" direction="" style="background-color: rgb(223, 126, 126); color:rgb(77, 76, 76) ;"> Designed by Ansh Mishra | All rights are reserved©®</marquee>
+    </footer>
+
+</body>
+
+</html>
